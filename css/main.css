@@ -3,12 +3,12 @@
 }
 
 @font-face {
-  font-family: "Corbel";
+  font-family: "Corbel1";
   src: url("../fonts/ofont.ru_Corbel.ttf");
 }
 
 body{
-  font-family: "Corbel", SansSerif;
+  font-family: "Corbel1", SansSerif;
 
   margin: 0;
   padding: 0;
