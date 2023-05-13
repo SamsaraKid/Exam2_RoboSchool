@@ -200,6 +200,12 @@ header .wrap{
 }
 
 
+@media screen and (max-width: 800px) {
+  #head {
+    padding: 10px 0;
+  }
+}
+
 /*Секция с программой*/
 
 
