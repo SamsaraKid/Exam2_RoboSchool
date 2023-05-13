@@ -1,0 +1,366 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Corbel", SansSerif;
+
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  max-width: 1200px;
+  margin: auto;
+}
+
+svg{
+  fill: #0DACBF;
+}
+
+/*Меню*/
+header{
+  width: 100%;
+  position: fixed;
+  background: none;
+  font-size: 25px;
+  z-index: 100;
+}
+
+header .wrap{
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo{
+  width: 253px;
+}
+
+#wideMenu{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+}
+
+#wideMenu li{
+  padding: 0 15px;
+}
+
+#wideMenu a{
+  text-decoration: none;
+  color: white;
+}
+
+#wideMenu a:hover{
+  text-decoration: underline;
+}
+
+#menuBut{
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border: none;
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#narrowMenuWrap{
+  display: none;
+  height: 0px;
+  overflow: hidden;
+}
+
+.menuDownAnim{
+  animation: menuDown linear 300ms;
+  animation-fill-mode: forwards;
+}
+
+.menuUpAnim{
+  animation: menuUp linear 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menuDown{
+  from{
+    height: 0px;
+  }
+  to{
+    height: 310px;
+  }
+}
+
+@keyframes menuUp{
+  from{
+    height: 310px;
+  }
+  to{
+    height: 0px;
+  }
+}
+
+
+#narrowMenu{
+  display: block;
+  max-width: 1200px;
+  background-color: white;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0 40px 20px;
+
+}
+
+#narrowMenu li{
+  display: block;
+  background-color: lightgray;
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;
+  padding: 20px 40px;
+}
+
+#narrowMenu a{
+  text-decoration: none;
+  color: black;
+}
+
+#narrowMenu a:hover{
+  color: #0DACBF;
+}
+
+
+
+
+@media screen and (max-width: 1000px){
+  header{
+    position: static;
+  }
+  #narrowMenuWrap{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px){
+  #wideMenu{
+    display: none;
+  }
+  #menuBut{
+    display: block;
+  }
+  #narrowMenuWrap{
+    display: block;
+  }
+}
+
+
+
+/*Верхняя часть*/
+#head{
+  background-image: url("../img/back_head.jpg");
+  background-repeat: repeat-y;
+  background-position: top;
+  color: white;
+  font-size: 25px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.headText{
+  max-width: 680px;
+  text-align: center;
+}
+
+#head button{
+  padding: 25px 35px;
+  border-radius: 40px;
+  border: none;
+  background-color: yellow;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#head button:hover{
+  background-color: #ffef00;
+  cursor: pointer;
+  color: #0DACBF;
+}
+
+
+/*Секция с программой*/
+
+
+#prog{
+  text-align: center;
+}
+
+#prog h1{
+  text-transform: uppercase;
+}
+
+#prog h2{
+  margin: 0;
+}
+
+.progCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: justify;
+}
+
+/*Карточки*/
+.center{
+  /*position: relative;*/
+  /*top: 135px;*/
+  /*left: 135px;*/
+  /*transform: translate(-50%, -50%);*/
+}
+
+.card{
+  cursor: pointer;
+  width: 270px;
+  height: 270px;
+  margin: 0 15px;
+  transform: translate(-50%, -50%);
+
+  position: relative;
+  top: 135px;
+  left: 11.25%;
+}
+
+.front,
+.back{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .4s linear;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #333333;
+  padding: 0 10%;
+}
+
+.front img{
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.front{
+  color: white;
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+  transform: perspective(600px) rotateY(180deg);
+  background-color: #f1f1f1;
+}
+
+/*.back-content{*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  text-align: center;*/
+/*  color: #333333;*/
+/*  padding: 0 10%;*/
+/*}*/
+
+
+
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+
+
+/*Карточки с результатами*/
+.card1{
+  width: 400px;
+  text-align: left;
+}
+
+.progCards .card1{
+  margin: 20px auto;
+}
+
+.card1 h2{
+  line-height: 1em;
+}
+
+.card1 p{
+  margin: 0;
+}
+
+.card1SVG{
+  width: 70px;
+  height: 70px;
+  padding-right: 10px;
+}
+
+.card1Head{
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media screen and (max-width: 800px){
+  .progCards{
+    flex-direction: column;
+  }
+  .card{
+    width: 95%;
+    margin: 0;
+    left: 47.5%
+  }
+  /*.center{*/
+  /*  left: 50%*/
+  /*}*/
+  .front img{
+    width: 100%;
+    height: unset;
+  }
+
+  .card1{
+    margin: auto 10px;
+  }
+  .card1SVG{
+    padding-right: 20px;
+  }
+  .card1 p{
+    padding-left: 70px;
+    position: relative;
+    bottom: 40px;
+  }
+}
+
+
+/*Секция с описанием*/
+
+/*Секция с адресом*/
+
+/*Секция с отзывами*/
+
+/*Секция с записью*/
+
+
+
+
