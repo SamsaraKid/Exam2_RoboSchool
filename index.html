@@ -372,17 +372,17 @@
 
                     <label class="inputBox">
                         <span>Как к вам обращаться?</span>
-                        <input type="text" required name="name" placeholder="Иван Иванович Иванов">
+                        <input class="textField" type="text" required name="name" placeholder="Иван Иванович Иванов">
                     </label>
 
                     <label class="inputBox">
                         <span>Ваш e-mail:</span>
-                        <input type="email" required name="address" placeholder="example@mail.com">
+                        <input class="textField" type="email" required name="address" placeholder="example@mail.com">
                     </label>
 
                     <label class="inputBox">
                         <span>Ваш телефон:</span>
-                        <input type="text" name="phone" placeholder="+7 (123) 456-78-90">
+                        <input class="textField" type="text" name="phone" placeholder="+7 (123) 456-78-90">
                     </label>
 
                     <fieldset id="fieldsetFeedback">
@@ -402,20 +402,20 @@
 
                     <label class="inputBox">
                         <span>Имя учащегося:</span>
-                        <input type="text" name="nameStudent" placeholder="Иван Иванович Иванов">
+                        <input class="textField" type="text" name="nameStudent" placeholder="Иван Иванович Иванов">
                     </label>
 
                     <label>
                         <span>Возраст учащегося:</span>
                         <select name="age">
-                            <option value="1">8-12 лет</option>
-                            <option value="2">13-20 лет</option>
-                            <option value="3">20+ лет</option>
+                            <option value="8-12">8-12 лет</option>
+                            <option value="13-20">13-20 лет</option>
+                            <option value="20+">20+ лет</option>
                         </select>
                     </label>
 
                     <label id="checkPersonal">
-                        <input type="checkbox" required>
+                        <input type="checkbox" required name="consentProcessPD">
                         <span>Согласие на обработку персональных данных</span>
                         <div><a href="https://educationrobots.ru/privacy/">в соответствии с политикой
                             конфиденциальности</a></div>
