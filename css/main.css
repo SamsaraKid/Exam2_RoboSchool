@@ -446,10 +446,11 @@ header .wrap{
 }
 
 .revCard{
-  border: black dotted 1px;
+  /*border: black dotted 1px;*/
   border-radius: 10px;
+  box-shadow: lightgray 0 0 10px;
   max-width: 30%;
-  padding: 1% 2% 0;
+  padding: 1% 2%;
 }
 
 .revCard img{
