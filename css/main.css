@@ -19,6 +19,10 @@ main{
   margin: auto;
 }
 
+h1{
+  text-transform: uppercase;
+}
+
 svg{
   fill: #0DACBF;
 }
@@ -213,10 +217,6 @@ header .wrap{
   text-align: center;
 }
 
-#prog h1{
-  text-transform: uppercase;
-}
-
 #prog h2{
   margin: 0;
 }
@@ -227,6 +227,7 @@ header .wrap{
   justify-content: space-around;
   align-items: center;
   text-align: justify;
+  padding: 0 2%;
 }
 
 /*Карточки*/
@@ -338,7 +339,8 @@ header .wrap{
     flex-direction: column;
   }
   .progCards .card1{
-    margin-left: 3%;
+    /*padding-left: 3%;*/
+    margin: auto;
   }
   .card{
     width: 95%;
@@ -364,6 +366,21 @@ header .wrap{
 
 
 /*Секция с описанием*/
+#desc{
+  text-align: center;
+}
+
+#shortDesc{
+  max-width: 50%;
+  padding: 0 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  #shortDesc {
+    max-width: 100%;
+  }
+}
 
 /*Секция с адресом*/
 
