@@ -29,13 +29,14 @@ main section{
   }
 }
 
-#prog, #desc{
+#prog, #desc, #join{
   max-width: 1200px;
   margin: auto;
 }
 
 h1{
   text-transform: uppercase;
+  text-align: center;
 }
 
 svg{
@@ -487,6 +488,79 @@ header .wrap{
 
 
 /*Секция с записью*/
+
+#form{
+  margin: 20px auto;
+  max-width: 500px;
+  background-color: lightgray;
+  box-shadow: #333333 0px 0px 10px;
+  border-radius: 10px;
+
+
+
+}
+
+#fieldsetWrap{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*margin: 5px;*/
+  padding: 20px;
+
+}
+
+label, #send, legend{
+  font-family: "Corbel1", SansSerif;
+  font-size: x-large;
+}
+
+.inputBox input{
+  height: 40px;
+  width: 200px;
+  text-align: center;
+
+  font-family: "Corbel1", SansSerif;
+  font-size: large;
+}
+
+.inputBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+#checkPersonal{
+  font-size: medium;
+  margin-top: 10px;
+}
+
+#fieldsetFeedback, #send{
+  margin-top: 5px;
+}
+
+#fieldsetFeedback{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+
+footer{
+    color: #506279;
+    font-size: small;
+    text-align: center;
+}
+
+
+
+
+
 
 
 
