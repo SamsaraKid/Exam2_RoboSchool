@@ -491,13 +491,11 @@ header .wrap{
 
 #form{
   margin: 20px auto;
+  width: 90%;
   max-width: 500px;
   background-color: lightgray;
   box-shadow: #333333 0px 0px 10px;
   border-radius: 10px;
-
-
-
 }
 
 #fieldsetWrap{
