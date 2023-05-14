@@ -532,8 +532,9 @@ label, #send, legend{
 }
 
 #checkPersonal{
-  font-size: medium;
+  font-size: small;
   margin-top: 10px;
+  text-align: center;
 }
 
 #fieldsetFeedback, #send{
