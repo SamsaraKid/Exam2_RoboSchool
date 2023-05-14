@@ -33,6 +33,15 @@ function showHideMenu(){
         }, 300)
 }
 
+function showHideLongDesc(){
+
+    if ($('#longDesc').prop('hidden')){
+        $('#longDesc').attr("hidden", false)
+    } else {
+        $('#longDesc').attr("hidden", true)
+    }
+
+}
 
 consoleStyle()
 
@@ -40,3 +49,4 @@ $(window).scroll(consoleStyle)
 $(window).resize(consoleStyle)
 
 $('#menuBut').click(showHideMenu)
+$('#moreBut').click(showHideLongDesc)
